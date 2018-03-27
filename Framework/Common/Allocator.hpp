@@ -43,7 +43,21 @@ namespace Ella {
         void FillAllocatedBlock(BlockHeader *pBlock);
 #endif
 
+        BlockHeader * NextBlock(BlockHeader *pBlock);
+        PageHeader * m_pBlockList;
+        BlockHeader * m_pFreeList;
+        size_t m_szDataSize;
+        size_t m_szPageSize;
+        size_t m_szAligmentSize;
+        size_t m_szBlockSize;
+        uint32_t m_nBlocksPerPage;
 
+        uint32_t m_nPages;
+        uint32_t m_nBlocks;
+        uint32_t m_nFreeBlocks;
+
+        Allocator(const Allocator &clone);
+        Allocator & operator(const Allocator &clone);
     };
 
 
