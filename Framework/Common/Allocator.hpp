@@ -44,7 +44,7 @@ namespace Ella {
 #endif
 
         BlockHeader * NextBlock(BlockHeader *pBlock);
-        PageHeader * m_pBlockList;
+        PageHeader * m_pPageList;
         BlockHeader * m_pFreeList;
         size_t m_szDataSize;
         size_t m_szPageSize;
